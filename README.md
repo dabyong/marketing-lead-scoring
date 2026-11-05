@@ -4,7 +4,9 @@
 
 A reproducible, portfolio-grade lead-ranking prototype for a historical bank-marketing dataset. The application ranks **synthetic** contact records for manual review under a fixed capacity; it is **not** a deployed customer-targeting or eligibility system and its model scores are **not calibrated subscription probabilities**.
 
-> **Project status:** Model development, final holdout evaluation, retrospective simulation, local Streamlit demo, and local QA complete. Public deployment pending.
+> **Project status:** Model development, locked final holdout evaluation, retrospective capacity simulation, automated QA (12/12 tests passed), and public Streamlit research demo complete.
+
+**[Launch the live synthetic-lead demo](https://marketing-lead-scoring-9nm4ut8erckcwkmptyz9rd.streamlit.app/)** · [View the main portfolio](https://github.com/dabyong/PORTFOLIO)
 
 ## The business question
 
