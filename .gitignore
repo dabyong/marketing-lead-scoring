@@ -1,0 +1,30 @@
+# Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Never commit secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Source contact-level data and derived row-level splits
+/data/raw/
+/data/processed/
+
+# Per-record predictions, including historical outcomes and scores
+/reports/*predictions*.csv
+/reports/*prediction*.csv
+/reports/*ranked*.csv
+
+# Local backups, scratch and machine-specific files
+/app/*backup*.py
+*.log
+.DS_Store
+Thumbs.db

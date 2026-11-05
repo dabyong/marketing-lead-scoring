@@ -1,0 +1,24 @@
+{
+  "model": "reduced_random_forest",
+  "artifact": "models/09_reduced_feature_rf.joblib",
+  "sha256": "32fb60f08051d0e7597e5d4af9efc1523b932e26292b3bd12f5f1c8e7c4b9e83",
+  "features_in_order": [
+    "default",
+    "housing",
+    "loan",
+    "poutcome",
+    "previous",
+    "prior_contacted",
+    "days_since_previous"
+  ],
+  "test_row_start": 35009,
+  "selection_basis": "Validation only. Subgroup selection-rate trade-off prioritized over peak AP.",
+  "validation_ap": 0.1587,
+  "validation_precision_at_10": 0.1974,
+  "validation_lift_at_10": 1.85,
+  "constraints": [
+    "Do not refit or tune using test outcomes",
+    "Scores are not calibrated probabilities",
+    "Not approved for real-world customer targeting"
+  ]
+}

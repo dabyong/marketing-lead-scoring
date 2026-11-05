@@ -1,0 +1,27 @@
+{
+  "model": "reduced_random_forest",
+  "model_sha256": "32fb60f08051d0e7597e5d4af9efc1523b932e26292b3bd12f5f1c8e7c4b9e83",
+  "records": 6179,
+  "subscriptions": 2376,
+  "observed_subscription_rate": 0.38452824081566594,
+  "mean_predicted_score": 0.07715341431062887,
+  "average_precision": 0.5429336195305066,
+  "roc_auc": 0.6307566306415899,
+  "brier_score": 0.32179421953662213,
+  "log_loss": 1.0053360766768502,
+  "ece_10_equal_count_bins": 0.3073748265050371,
+  "top10_contacts": 618,
+  "top10_subscribers_found": 448,
+  "precision_at_10": 0.7249190938511327,
+  "lift_at_10": 1.8852167848931605,
+  "recall_at_10": 0.18855218855218855,
+  "random_selection_expected_subscribers_at_10": 237.63845282408155,
+  "limitations": [
+    "Holdout label prevalence was reported earlier in Step 4, so this was not fully blind.",
+    "Test is used for evaluation once; no retraining or model selection follows.",
+    "Model probabilities are uncalibrated and affected by time shift.",
+    "Historical ranking is not a causal or live campaign lift estimate.",
+    "Same-day and repeat-customer overlap cannot be excluded.",
+    "Subgroup differences require governance review before deployment."
+  ]
+}

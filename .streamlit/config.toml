@@ -1,0 +1,14 @@
+# Same palette as dabyong/PORTFOLIO/style.css
+[theme]
+base = "light"
+primaryColor = "#2fd18f"
+backgroundColor = "#FAF9FE"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0f111a"
+font = "monospace"
+
+[server]
+maxUploadSize = 5
+
+[browser]
+gatherUsageStats = false
