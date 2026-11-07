@@ -147,8 +147,11 @@ def show_portfolio_header():
     # Constant HTML only: never inject text from uploaded CSV into the page.
     st.markdown("""
     <div class="p4-brandbar">
-      <div class="p4-brand"><a href="https://github.com/dabyong/PORTFOLIO" target="_blank" rel="noopener noreferrer">ALLAN_DAVE_CABANLONG</a></div>
-      <div class="p4-subbrand">PROJECT_04 // DATA_ANALYST + AI_FOCUS</div>
+      <div class="p4-brand"><a href="https://allandavecabanlong.vercel.app/">ALLAN_DAVE_CABANLONG</a></div>
+      <div class="p4-header-actions">
+        <span class="p4-subbrand">PROJECT_04 // DATA_ANALYST + AI_FOCUS</span>
+        <a class="p4-portfolio-return" href="https://allandavecabanlong.vercel.app/" aria-label="Return to portfolio">← Return to Portfolio</a>
+      </div>
     </div>
     <div class="p4-hero">
       <div class="p4-eyebrow"><span class="p4-prompt">&gt;</span> ./projects/04_marketing_lead_scoring</div>
@@ -195,7 +198,7 @@ def capacity_chart(capacities: pd.DataFrame, observed_rate: float):
 def main():
     st.set_page_config(
         page_title="Marketing Lead Scoring | Project 04",
-        page_icon="📊",
+        page_icon=str(ROOT / "app" / "portfolio_favicon.png"),
         layout="wide",
         initial_sidebar_state="collapsed",
     )

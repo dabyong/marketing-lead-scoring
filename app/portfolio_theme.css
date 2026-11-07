@@ -17,9 +17,6 @@ html, body, [data-testid="stAppViewContainer"], .stApp {
   color: var(--p4-ink);
   font-family: var(--p4-body) !important;
 }
-[data-testid="stHeader"] { background: var(--p4-navy-900); }
-[data-testid="stHeader"] button, [data-testid="stHeader"] svg { color: #fff !important; }
-[data-testid="stDecoration"] { background: var(--p4-accent); }
 .block-container { max-width: 1228px !important; padding-top: 1.2rem !important; padding-bottom: 4rem !important; }
 /* Branded project hero mirrors the portfolio's terminal/section system. */
 .p4-brandbar {
@@ -127,3 +124,55 @@ code {font-family:var(--p4-display) !important;}
   [data-testid="stMetric"] {min-height:105px;padding:.8rem .65rem;}
 }
 @media(prefers-reduced-motion:reduce) {*,*::before,*::after { transition-duration:0.01ms !important;animation-duration:0.01ms !important;}}
+
+/* Keep only the portfolio-branded header; Streamlit's built-in header,
+   Share toolbar and decoration are not needed for this one-page demo. */
+header[data-testid="stHeader"],
+[data-testid="stToolbar"],
+[data-testid="stDecoration"],
+#MainMenu {
+  display: none !important;
+}
+.block-container { padding-top: .4rem !important; }
+
+/* Right-hand return action, kept visible on desktop and mobile. */
+.p4-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-left: auto;
+}
+.p4-portfolio-return {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .65rem .9rem;
+  border: 1px solid #2fd18f;
+  color: #0a0f2e !important;
+  background: #2fd18f;
+  border-radius: 2px;
+  font-family: var(--p4-display);
+  font-size: .73rem;
+  font-weight: 800;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: background-color .15s ease, transform .15s ease;
+}
+.p4-portfolio-return:hover {
+  background: #7ae9bf;
+  color: #0a0f2e !important;
+  transform: translateY(-1px);
+}
+.p4-portfolio-return:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+@media (max-width: 760px) {
+  .p4-header-actions { width: 100%; justify-content: space-between; gap: .65rem; }
+  .p4-portfolio-return { font-size: .7rem; padding: .58rem .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .p4-portfolio-return { transition: none; }
+}
