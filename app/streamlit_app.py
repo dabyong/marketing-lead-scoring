@@ -16,6 +16,7 @@ import joblib
 import numpy as np
 import pandas as pd
 import streamlit as st
+from PIL import Image
 import altair as alt
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -198,7 +199,7 @@ def capacity_chart(capacities: pd.DataFrame, observed_rate: float):
 def main():
     st.set_page_config(
         page_title="Marketing Lead Scoring | Project 04",
-        page_icon=str(ROOT / "app" / "portfolio_favicon.png"),
+        page_icon=Image.open(ROOT / "app" / "portfolio_favicon.png"),
         layout="wide",
         initial_sidebar_state="collapsed",
     )
